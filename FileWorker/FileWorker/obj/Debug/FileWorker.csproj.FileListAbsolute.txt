@@ -1,0 +1,9 @@
+C:\с# learning\units,orders,people\FileWorker\FileWorker\bin\Debug\FileWorker.exe.config
+C:\с# learning\units,orders,people\FileWorker\FileWorker\bin\Debug\FileWorker.exe
+C:\с# learning\units,orders,people\FileWorker\FileWorker\bin\Debug\FileWorker.pdb
+C:\с# learning\units,orders,people\FileWorker\FileWorker\bin\Debug\MySql.Data.dll
+C:\с# learning\units,orders,people\FileWorker\FileWorker\bin\Debug\MySql.Data.xml
+C:\с# learning\units,orders,people\FileWorker\FileWorker\obj\Debug\FileWorker.csprojResolveAssemblyReference.cache
+C:\с# learning\units,orders,people\FileWorker\FileWorker\obj\Debug\FileWorker.csproj.CoreCompileInputs.cache
+C:\с# learning\units,orders,people\FileWorker\FileWorker\obj\Debug\FileWorker.exe
+C:\с# learning\units,orders,people\FileWorker\FileWorker\obj\Debug\FileWorker.pdb
