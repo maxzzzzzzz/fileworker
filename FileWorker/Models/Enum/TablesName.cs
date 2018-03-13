@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FileWorker
+namespace Models.Enum
 {
-    class Orders
+    public enum TablesName
     {
+        Units = 0,
+        People = 1,
+        Orders = 2
     }
 }

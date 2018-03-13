@@ -1,0 +1,6 @@
+C:\с# learning\units,orders,people\FileWorker\Models\bin\Debug\Models.dll
+C:\с# learning\units,orders,people\FileWorker\Models\bin\Debug\Models.pdb
+C:\с# learning\units,orders,people\FileWorker\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\с# learning\units,orders,people\FileWorker\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\с# learning\units,orders,people\FileWorker\Models\obj\Debug\Models.dll
+C:\с# learning\units,orders,people\FileWorker\Models\obj\Debug\Models.pdb
