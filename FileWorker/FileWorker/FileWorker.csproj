@@ -54,7 +54,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="files\oreder.txt" />
+    <Content Include="files\order.txt" />
     <Content Include="files\person.txt" />
     <Content Include="files\unit.txt" />
   </ItemGroup>

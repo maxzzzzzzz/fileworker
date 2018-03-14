@@ -14,7 +14,7 @@ namespace FileWorker
     {
         static void Main(string[] args)
         {
-            /* string connectionString = "Server=localhost;UID=root;password=root;database=database_laboratorni";
+             /*string connectionString = "Server=localhost;UID=root;password=root;database=database_laboratorni";
              DataTable dt = new DataTable();
              dt.Columns.Add(new DataColumn("id", typeof(int)));
              dt.Columns.Add(new DataColumn("name", typeof(string)));
@@ -63,9 +63,13 @@ namespace FileWorker
              Console.WriteLine("Подключение закрыто...");*/
             var fileManager = new FileManager();
             var dbManager = new DBManager();
-            var person = fileManager.ReadPersonFromFile(FilePaths.PathToPerson);
-            dbManager.AddPersonToDB(person);
-            //dbManager.GetConnection();
+            //var person = fileManager.ReadPersonFromFile(FilePaths.PathToPerson);
+            //var unit = fileManager.ReadUnitsFromFile(FilePaths.pathToUnits);
+            var order = fileManager.ReadOrdersFromFile(FilePaths.PathToOrders);
+            
+            //dbManager.AddPersonToDB(person);
+            //dbManager.AddUnitToDB(unit);
+
             Console.ReadKey(true);
         }
     }

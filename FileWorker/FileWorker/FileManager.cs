@@ -11,33 +11,80 @@ namespace FileWorker
 {
     class FileManager : IFileManager
     {
-        public DataTable ReadPersonFromFile(string pathFile)
+        public List<Person> ReadPersonFromFile(String pathName)
         {
-            DataTable dt = new DataTable();
-            dt.Columns.Add(new DataColumn("name", typeof(string)));
-            dt.Columns.Add(new DataColumn("surname", typeof(string)));
-            dt.Columns.Add(new DataColumn("age", typeof(int)));
-            dt.Columns.Add(new DataColumn("email", typeof(string)));
-            var data = Directory.EnumerateFiles(pathFile).Select(File.ReadAllText);
-            foreach (var v in data)
+            IEnumerable<string> text = File.ReadLines(pathName);
+            List<Person> persons = new List<Person>();
+            var person = new Person();
+            
+            foreach(var s in text)
             {
-                foreach (var s in v.Split('\n'))
+                foreach(var v in s.Split('\n'))
                 {
                     var ss = s.Split();
-                    DataRow nr = dt.NewRow();
-                    nr[0] = Convert.ToInt32(ss[0]);
-                    nr[1] = Convert.ToString(ss[1]);
-                    nr[2] = Convert.ToString(ss[2]);
-                    nr[3] = Convert.ToInt32(ss[3]);
-                    //nr[4] = Convert.ToString(ss[4]);
-                    //nr[2] = ss[2];
-                    dt.Rows.Add(nr);
+                    var per = new Person();
+                    per.Name = Convert.ToString(ss[0]);
+                    per.Surname = Convert.ToString(ss[1]);
+                    per.Age = Convert.ToInt32(ss[2]);
+                    per.Email = Convert.ToString(ss[3]);
+
+                    persons.Add(per);
                 }
             }
-            return dt;
+    
+            return persons;
         }
-        public List<Unit> ReadUnitsFromFile(string pathName) { return new List<Unit>(); }
-        public List<Order> ReadOrdersFromFile(string pathName) { throw new NotImplementedException(); }
 
-    }
+
+          public List<Unit> ReadUnitsFromFile(string pathName)
+        {
+            IEnumerable<string> text = File.ReadLines(pathName);
+            List<Unit> units = new List<Unit>();
+            
+
+            foreach (var s in text)
+            {
+                foreach (var v in s.Split('\n'))
+                {
+                    var ss = s.Split();
+                    var unit = new Unit();
+                    unit.TypeOfUnit = Convert.ToString(ss[0]);
+                    unit.Area = Convert.ToDouble(ss[1]);
+                    unit.Price = Convert.ToDecimal(ss[2]);
+                    
+
+                    units.Add(unit);
+                }
+            }
+
+            return units;
+        }
+          public List<Order> ReadOrdersFromFile(string pathName)
+            {
+            IEnumerable<string> text = File.ReadAllLines(pathName);
+            List<Order> orders = new List<Order>();
+            char[] del = { ' ' };
+            
+
+            foreach (var s in text)
+            {
+                foreach (var v in s.Split(del))
+                {
+                    var ss = s.Split();
+                    var order = new Order();
+                    order.PersonId = Convert.ToInt32(ss[0]);
+                    order.UnitId = Convert.ToInt32(ss[1]);
+                    order.Date = Convert.ToDateTime((ss[2]));
+                    order.ForTime = Convert.ToInt32(ss[3]);
+                    orders.Add(order);
+                }
+            }
+
+            return orders;
+        }
+    }   
 }
+
+
+    
+

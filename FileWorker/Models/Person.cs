@@ -22,6 +22,17 @@ namespace Models
             this.Age = age;
             this.Email = email;
         }
+        public Person(string name, string surname, int age, string email)
+        {
+            this.Name = name;
+            this.Surname = surname;
+            this.Age = age;
+            this.Email = email;
+        }
+        public void PrintInfo()
+        {
+            Console.WriteLine(Name + " " + " " + Surname + " " + Age + " " + Email);
+        }
 
     }
 }
